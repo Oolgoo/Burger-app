@@ -1,14 +1,27 @@
-import React, { Component } from 'react'
-import Burger from '../../../components/Burger';
+import React, { Component } from 'react';
+import Burger from '../../../components/Burger';  // Make sure to import the correct Burger component
+import BuildControls from '../../../components/BuildControls';
 class BurgerBuilder extends Component {
-    render(){
-        return(
-            <div>
-                <Burger/>
-                <div>Орцны удирдлага</div>
-            </div>
-        )
+  state = {
+    ingredients: {
+      Salad:1,
+      Cheese:1,
+      Bacon:2,
+      Meat:2,
     }
-} 
-    
-export default BurgerBuilder ;
+  };
+
+  render() {
+    const {ingredients} = this.state;
+
+    return (
+      <div>
+        <Burger orts={ingredients} />
+         <BuildControls/> 
+      </div>
+    );
+  }
+}
+
+
+export default BurgerBuilder;

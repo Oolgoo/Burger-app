@@ -1,14 +1,14 @@
 import React from 'react';
 import './style.css';
 import Toolbar from '../../components/Toolbar';
-import Burger from '../../components/Burger';
+import BurgerBuilder from './Burgerbuilder';
+
 function App() {
   return (
-    <div >
+    <div>
       <div><Toolbar/></div>
-      <div> <Burger/> </div>
-    </div> 
-    
+      <div> <BurgerBuilder/> </div>
+    </div>
   );
 }
 
