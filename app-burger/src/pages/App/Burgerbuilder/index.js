@@ -4,11 +4,19 @@ import BuildControls from '../../../components/BuildControls';
 class BurgerBuilder extends Component {
   state = {
     ingredients: {
-      Salad:1,
-      Cheese:1,
-      Bacon:2,
-      Meat:2,
+      Salad:0,
+      Cheese:0,
+      Bacon:0,
+      Meat:0,
     }
+  };
+
+  ortsNemeh =(type) =>{
+    console.log("=====>"+ type)
+    
+    const newingredients = {...this.state.ingredients};
+    newingredients[type]++;
+    this.setState({ingredients:newingredients})
   };
 
   render() {
@@ -16,8 +24,9 @@ class BurgerBuilder extends Component {
 
     return (
       <div>
-        <Burger orts={ingredients} />
-         <BuildControls/> 
+        <Burger orts={ingredients} /> 
+        <BuildControls ortsNemeh={this.ortsNemeh}/>
+   
       </div>
     );
   }

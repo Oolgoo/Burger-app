@@ -5,7 +5,7 @@ import styles from '../Burger/style.module.css'
 const Burger = props => {
 
  
-  let a = []
+  let a = [] ;
   const items =Object.entries(props.orts)
   items.map(el=>{
     for(let i=0; i < el[1]; i++ )
